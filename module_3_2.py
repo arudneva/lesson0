@@ -3,24 +3,24 @@ def send_email(message, recipient, *, sender="university.help@gmail.com"):
         print(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}")
         return
     if ".com" in recipient:
-        a = True
+        recipient_adress = True
     elif ".ru" in recipient:
-        a = True
+        recipient_adress = True
     elif ".net" in recipient:
-        a = True
+        recipient_adress = True
     else:
-        a = False
+        recipient_adress = False
         print(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}.")
         return
 
     if ".com" in sender:
-        a = True
+        sender_adress = True
     elif ".ru" in sender:
-        a = True
+        sender_adress = True
     elif ".net" in sender:
-        a = True
+        sender_adress = True
     else:
-        a = False
+        sender_adress = False
         print(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}.")
         return
 
