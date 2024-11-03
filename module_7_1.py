@@ -32,7 +32,6 @@ class Shop:
         for product in products:
             if str(product) in existing_products:
                 print(f'Продукт {product.name} уже есть в магазине')
-                continue
             else:
                 file.write(str(product)+'\n')
         file.close()
