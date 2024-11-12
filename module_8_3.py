@@ -1,6 +1,3 @@
-from module3.module_3_5 import result
-
-
 class IncorrectVinNumber(Exception):
     def __init__(self, message):
         self.message = message
@@ -15,7 +12,8 @@ class Car():
         self.model = model
         self.__vin = vin
         self.__numbers = numbers
-
+        self.__is_valid_vin(self.__vin)
+        self.__is_valid_numbers(self.__numbers)
 
     def __is_valid_vin(self, vin_number):
         if not isinstance (vin_number, int):
