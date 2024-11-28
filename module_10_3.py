@@ -21,9 +21,8 @@ class Bank():
             minus_balance = random.randint(50,500)
             print(f"Запрос на {minus_balance}")
             if minus_balance <= self.balance:
-                with self.lock:
-                    self.balance -= minus_balance
-                    print(f"Снятие: {minus_balance}. Баланс: {self.balance}")
+                self.balance -= minus_balance
+                print(f"Снятие: {minus_balance}. Баланс: {self.balance}")
             else:
                 print("Запрос отклонён, недостаточно средств")
                 self.lock.acquire()
