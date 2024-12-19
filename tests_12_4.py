@@ -71,14 +71,14 @@ class RunnerTest(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
 
     logging.basicConfig(level=logging.INFO, filemode= "w", filename= "runner_tests.log", encoding= "UTF-8", format = "%(asctime)s | %(levelname)s | %(message)s")
 
+    unittest.main()
 
-# first = Runner('Вося', 10)
-# second = Runner('Илья', 5)
-# third = Runner('Арсен', 10)
+first = Runner('Вося', 10)
+second = Runner('Илья', 5)
+third = Runner('Арсен', 10)
 #
 # t = Tournament(101, first, second)
 # print(t.start())
