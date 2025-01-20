@@ -44,6 +44,10 @@ async def send_calories(message, state):
     await state.update_data(weight=message.text)
     data = await state.get_data()
 
+@dp.message_handler()
+async def all_massages(message):
+    print("Введите команду /start, чтобы начать общение.")
+
     age = int(data.get('age'))
     growth = int(data.get('growth'))
     weight = int(data.get('weight'))
